@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+
+    <body class="darkBody">
+
+        <%- include('./partials/nav.ejs') %>
+            <%- include('./partials/header.ejs') %>
+                <div class="grid grid-cols-1 gap-6">
+                    <form action="/users" method="POST">
+                        <div class="max-w-xl mx-auto py-20 divide-y md:max-w-xl ">
+                            <div class=" mt-100 max-w-md ">
+                                <div class="grid grid-cols-1 gap-6 ">
+                                    <h3 class="front darkMode">Register</h3>
+                                    <label for="firstname" class="text-black dark:text-white">First name:</label>
+                                    <input type="firstname" id="firstname" name="firstname" class="mt-1
+                                    block
+                                    w-full
+                                    h-10
+                                    rounded-md
+                                    border-gray-300
+                                    shadow-sm
+                                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                    " placeholder="   john" required>
+                                    <label for="lastname" class="text-black dark:text-white">Last name: </label>
+                                    <input type="lastname" id="lastname" name="lastname" class="mt-1
+                                    block
+                                    w-full
+                                    h-10
+                                    rounded-md
+                                    border-gray-300
+                                    shadow-sm
+                                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                        placeholder="   Doe" required>
+                                    <label for="email" class="text-black dark:text-white">Email: </label>
+                                    <input name="email" id="email" name="email" class="mt-1
+                                    block
+                                    w-full
+                                    h-10
+                                    rounded-md
+                                    border-gray-300
+                                    shadow-sm
+                                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                        placeholder="   john@example.com" required>
+                                    <label for="password" class="text-black dark:text-white">Password: </label>
+                                    <input type="password" id="password" name="password" class="mt-1
+                                    block
+                                    w-full
+                                    h-10
+                                    rounded-md
+                                    border-gray-300
+                                    shadow-sm
+                                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                        placeholder="   *******" required>
+
+                                    <button class=" rounded-lg bg-blue-400 hover:bg-blue-700 text-white px-6
+                                        py-3">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <%- include('./partials/footer.ejs') %>
+    </body>
+
+</html>

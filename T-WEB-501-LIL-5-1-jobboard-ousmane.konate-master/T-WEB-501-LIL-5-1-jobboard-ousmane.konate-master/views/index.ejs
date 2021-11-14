@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+    <body class="darkBody">
+
+        <%- include('./partials/nav.ejs') %>
+            <%- include('./partials/header.ejs') %>
+
+
+                <h2 class="text-center text-xl font-black pb-5 darkMode ">Toutes nos offres inWish</h2>
+                <!---->
+                <% if (offers.length> 0){ %>
+                    <% offers.forEach(offer=>{ %>
+                        <div
+                            class="antialiased text-gray-900 px-6 max-w-2xl border-2 rounded-2xl ml-20 mt-6 md: flex-auto flex-wrap ">
+
+                            <a href="/offers/<%= offer._id %>">
+                                <br>
+                                <p
+                                    class="text-blue-600 uppercase underline dark:text-blue-200 hover:text-blue-800 front">
+
+                                    <%= offer.title %>
+                                </p>
+                            </a>
+                            <div class="text-dark darkMode">
+                                <div class="rounded-xl mt-4">
+                                    <p class="h-auto max-w-full">
+                                        <%= offer.company %>
+                                    </p>
+                                </div>
+                                <div class="mt-4">
+                                    <p class=" sdesc">
+                                        <%= offer.short_desc %>
+                                    </p>
+                                </div>
+
+
+
+
+                                <input type="button" id="b1" value="Learn More"
+                                    class="rounded-lg bg-blue-400 hover:bg-blue-700 text-white m-5 place-items-start px-6 py-3 font-semibold cursor-pointer">
+
+                                <div id="o1" style="display:none">
+                                    <div class="mt-4">
+
+                                        <p class="desc">
+                                            <%= offer.desc %>
+                                        </p>
+                                    </div>
+                                    <div class=" mt-4">
+                                        <p class="wage">
+                                            <%= offer.wage %>
+                                        </p>
+                                    </div>
+                                    <div class=" mt-4">
+                                        <p class="contrct">
+                                            <%= offer.contract %>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <% }) %>
+                            <% } else { %>
+                                <p>Il n'y a plus d'offre à afficher... Repassez plus tard sur inWish</p>
+                                <p>(Sinon allez voir la concurrence mais on reste les meilleurs)</p>
+                                <% } %>
+                                    <script>
+                                        $(document).ready(function () {
+                                            //Anime plusieurs propriétés en même temps
+                                            $("#b1").click(function () {
+                                                $("#o1").animate(
+                                                    {
+                                                        width: "=-20%",
+                                                        height: "toggle",
+                                                    },
+                                                    1000
+                                                );
+                                            });
+                                        });
+
+                                    </script>
+
+                                    <%- include('./partials/footer.ejs') %>
+    </body>
+
+</html>

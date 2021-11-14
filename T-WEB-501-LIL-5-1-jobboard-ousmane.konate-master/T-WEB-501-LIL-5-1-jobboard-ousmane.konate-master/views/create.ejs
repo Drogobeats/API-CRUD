@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+
+    <body>
+
+        <%- include('./partials/nav.ejs') %>
+            <%- include('./partials/header.ejs') %>
+
+                <div class="create-content">
+                    <form action="/offers" method="POST">
+                        <label for="title">Titre du poste proposé:</label>
+                        <input type="text" id="title" name="title" class="mt-1
+            block
+            w-full
+            h-10
+            rounded-md
+            border-gray-300
+            shadow-sm
+            focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required>
+                        <label for=" company">Nom de l'entreprise: </label>
+                        <input type="text" id="company" name="company" class="mt-1
+                        block
+                        w-full
+                        h-10
+                        rounded-md
+                        border-gray-300
+                        shadow-sm
+                        focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required>
+                        <label for="short_desc">Short Description</label>
+                        <textarea name="short_desc" id="short_desc" name="short_desc" class="mt-1
+                        block
+                        w-full
+                        h-10
+                        rounded-md
+                        border-gray-300
+                        shadow-sm
+                        focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"" required></textarea><br>
+                        <label for="
+                            desc">Description</label>
+                        <textarea name="desc" id="desc" name="desc" class="mt-1
+                        block
+                        w-full
+                        h-10
+                        rounded-md
+                        border-gray-300
+                        shadow-sm
+                        focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"" required></textarea>
+                        <label for="wage">Salaire potentiel: </label>
+                        <input type="text" id="wage" name="wage" class="mt-1
+                        block
+                        w-full
+                        h-10
+                        rounded-md
+                        border-gray-300
+                        shadow-sm
+                        focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"" required>
+                        <label for=" contract">Type de contrat </label>
+                        <input type="text" id="contract" name="contract" class="mt-1
+                        block
+                        w-full
+                        h-10
+                        rounded-md
+                        border-gray-300
+                        shadow-sm
+                        focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"" required>
+                        <button class=" rounded-lg bg-blue-400 hover:bg-blue-700 text-white px-6 py-3">Soumettre
+                        l'offre d'emploi</button>
+                    </form>
+                </div>
+
+                <%- include('./partials/footer.ejs') %>
+    </body>
+
+</html>

@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+}
+
+@layer components {
+  .span {
+    @apply flex space-x-4;
+  }
+  h3 {
+    @apply uppercase text-center text-lg;
+  }
+
+  .front {
+    @apply font-bold;
+  }
+
+  p {
+    @apply pb-5;
+  }
+  .navbar {
+    @apply shadow-xl bg-gray-300 hover:bg-gray-400  h-16 w-full flex items-center;
+  }
+  .nav_footer {
+    @apply shadow-xl bg-gray-300  h-16 w-full flex items-center;
+  }
+
+  .list {
+    @apply flex justify-evenly container;
+  }
+  .li {
+    @apply pl-4 pt-5 h-16 w-16 hover:text-white hover:underline;
+  }
+  .jump {
+    @apply animate-bounce;
+  }
+  .darkMode {
+    @apply dark:text-white;
+  }
+}
+.darkBody {
+  @apply bg-gray-100 dark:bg-gray-800 transition-colors duration-300;
+}
+
+.d {
+  @apply px-6;
+}

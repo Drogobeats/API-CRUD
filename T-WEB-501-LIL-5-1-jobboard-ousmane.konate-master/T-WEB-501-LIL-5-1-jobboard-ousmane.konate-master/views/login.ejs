@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+    <body class="darkBody">
+
+        <%- include('./partials/nav.ejs') %>
+            <%- include('./partials/header.ejs') %>
+
+                <form action="submit" method="POST">
+                    <div class=" max-w-xl mx-auto py-20 divide-y md:max-w-xl ">
+                        <div class="mt-100 max-w-md">
+                            <div class="grid grid-cols-1 gap-6 ">
+                                <h3 class="front darkMode">Log in</h3>
+                                <label class="block">
+                                    <span class="text-black dark:text-white">Pseudo</span>
+                                    <input type="text" class="
+                                mt-1
+                                block
+                                w-full
+                                h-10
+                                rounded-md
+                                border-gray-300
+                                shadow-sm
+                                focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                                " placeholder="   john" />
+                                </label>
+                                <label class="block">
+                                    <div class="mt-100 max-w-md">
+                                        <div class="grid grid-cols-1 gap-6 ">
+                                            <label class="block">
+                                                <span class="text-black dark:text-white">Password</span>
+                                                <input type="password" class="
+                                            mt-1        
+                                            block
+                                            w-full
+                                            h-10
+                                            rounded-md
+                                            border-gray-300
+                                            shadow-sm
+                                            focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                                            " placeholder="   *******" />
+                                            </label>
+                                            <button type="submit"
+                                                class="rounded-lg bg-blue-400 hover:bg-blue-700  text-white px-6 py-3">Connection</button>
+
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <%- include('./partials/footer.ejs') %>
+    </body>
+
+</html>

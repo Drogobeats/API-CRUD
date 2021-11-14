@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+    <body>
+
+        <%- include('./partials/nav.ejs') %>
+            <%- include('./partials/header.ejs') %>
+
+                <div class="details-content">
+                    <h2>
+                        <%= user.firstname +' '+ user.lastname %></h2>
+        <div class="content">
+            <p class ="desc">E-mail: <%= user.email %></p>
+            <p class ="desc">Password: <%= user.password %></p>
+        </div>
+        <a class="delete" data-doc="<%= user._id %>">Delete</a>
+    </div>
+    
+   
+
+                            <script>
+                                const trashcan = document.querySelector(' a.delete');
+                                trashcan.addEventListener('click', (e) => {
+                                    const endpoint = `/users/${trashcan.dataset.doc}`;
+
+                                    //ajax request
+                                    fetch(endpoint, {
+                                        method: 'DELETE'
+                                    })
+                                        .then((response) => response.json())
+                                        .then((data) => window.location.href = data.redirect)
+                                        .catch(err => console.log(err));
+                                })
+                            </script>
+                            <%- include('./partials/footer.ejs') %>
+    </body>
+
+</html>
